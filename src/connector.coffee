@@ -427,7 +427,7 @@ onStanza = (stanza) ->
       fromChannel = fromJid.bare().toString()
       fromNick = fromJid.resource
       # Ignore our own messages
-      return if fromNick is @name
+      # return if fromNick is @name
       @emit "message", fromChannel, fromNick, body
 
     else if stanza.attrs.type is "chat"
